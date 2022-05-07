@@ -9,6 +9,8 @@ import NotFound from './Components/HeaderAndFooter/NotFound/NotFound';
 import Service from './Components/Service/Service';
 import Item from './Components/StoreItems/Item';
 import ManageInventories from './Components/ManageInventories/ManageInventories';
+import Blog from './Components/MainPage/Blog/Blog';
+import AddItem from './Components/ManageInventories/AddItem';
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path='inventory/:itemId' element={<Item></Item>}></Route>
         <Route path="/Manageinventories" element={<ManageInventories />} />
+        <Route path="/additem" element={<AddItem />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
 
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
