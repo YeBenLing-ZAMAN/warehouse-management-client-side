@@ -1,0 +1,73 @@
+[
+    {
+      "id": "6275f4111b4cc1a30c3acef3",
+      "index": 0,
+      "name": "Steele Barker",
+      "price": "$2,952.94",
+      "img": "https://i.ibb.co/xs4b9XZ/04.jpg",
+      "quantity": 23,
+      "supplier": "Solis Bright",
+      "about": "Lorem qui aliquip sint tempor amet ut. Sit minim magna occaecat dolore enim sunt reprehenderit. Consequat anim enim commodo sint dolore ea laborum consequat velit pariatur ad. Pariatur cupidatat cillum eu eiusmod est duis in ad. Mollit ipsum nostrud aliquip labore quis aliqua est fugiat aliqua anim.\r\n",
+      "registered": "2016-11-09T04:25:59 -06:00"
+    },
+    {
+      "id": "6275f4118c61689aa2a7c28c",
+      "index": 1,
+      "name": "Tanya Montgomery",
+      "price": "$2,147.14",
+      "img": "https://i.ibb.co/5FB2v1s/03.jpg",
+      "quantity": 36,
+      "supplier": "Veronica Guerra",
+      "about": "Do qui ea non non ut esse deserunt amet. Esse ut dolor officia anim mollit laboris nostrud velit esse amet. Laborum sit nulla magna id reprehenderit.\r\n",
+      "registered": "2017-09-29T01:24:12 -06:00"
+    },
+    {
+      "id": "6275f41152d62c6a247137e3",
+      "index": 2,
+      "name": "Good Carrillo",
+      "price": "$1,468.56",
+      "img": "https://i.ibb.co/kgwv7jp/02.jpg",
+      "quantity": 26,
+      "supplier": "Patsy Chandler",
+      "about": "Magna ullamco excepteur fugiat elit. Cupidatat culpa cillum irure excepteur exercitation nostrud pariatur deserunt dolor irure Lorem tempor. Ipsum sunt adipisicing sunt est enim deserunt nostrud ea adipisicing ullamco consectetur do consectetur aliquip. Esse ad velit ex irure in voluptate laborum. Aliquip magna voluptate culpa elit aliqua dolor ea eu dolor elit. Commodo et labore in velit id.\r\n",
+      "registered": "2016-10-13T04:34:42 -06:00"
+    },
+    {
+      "id": "6275f41133828826d56ccff4",
+      "index": 3,
+      "name": "Marcia Cameron",
+      "price": "$3,564.68",
+      "img": "https://i.ibb.co/CWVjxHw/01.jpg",
+      "quantity": 25,
+      "supplier": "Keisha Haney",
+      "about": "Dolor laborum ex qui duis. Occaecat tempor esse aute non dolor minim dolor veniam eiusmod duis voluptate. Elit nostrud fugiat labore quis qui consequat dolore ad sunt ea tempor consectetur. Minim mollit sint sit ullamco deserunt est laborum aliquip aute. Proident fugiat consequat ipsum occaecat dolore sint excepteur enim. Consectetur culpa qui adipisicing mollit. Culpa velit esse magna irure est fugiat occaecat fugiat est occaecat et ea sunt.\r\n",
+      "registered": "2021-02-17T05:26:55 -06:00"
+    },
+    {
+      "id": "6275f4113382fefaf6ccff4",
+      "index": 3,
+      "name": "Marcia Cameron",
+      "price": "$3,564.68",
+      "img": "https://i.ibb.co/YjBCQGR/06.jpg",
+      "quantity": 25,
+      "supplier": "Keisha Haney",
+      "about": "Dolor laborum ex qui duis. Occaecat tempor esse aute non dolor minim dolor veniam eiusmod duis voluptate. Elit nostrud fugiat labore quis qui consequat dolore ad sunt ea tempor consectetur. Minim mollit sint sit ullamco deserunt est laborum aliquip aute. Proident fugiat consequat ipsum occaecat dolore sint excepteur enim. Consectetur culpa qui adipisicing mollit. Culpa velit esse magna irure est fugiat occaecat fugiat est occaecat et ea sunt.\r\n",
+      "registered": "2021-02-17T05:26:55 -06:00"
+    },
+    {
+      "id": "6275f41133828826fe56ccff4",
+      "index": 3,
+      "name": "Marcia Cameron",
+      "price": "$3,564.68",
+      "img": "https://i.ibb.co/N3wj6Rj/07.jpg",
+      "quantity": 25,
+      "supplier": "Keisha Haney",
+      "about": "Dolor laborum ex qui duis. Occaecat tempor esse aute non dolor minim dolor veniam eiusmod duis voluptate. Elit nostrud fugiat labore quis qui consequat dolore ad sunt ea tempor consectetur. Minim mollit sint sit ullamco deserunt est laborum aliquip aute. Proident fugiat consequat ipsum occaecat dolore sint excepteur enim. Consectetur culpa qui adipisicing mollit. Culpa velit esse magna irure est fugiat occaecat fugiat est occaecat et ea sunt.\r\n",
+      "registered": "2021-02-17T05:26:55 -06:00"
+    }
+  ]
+
+
+  
+
+
