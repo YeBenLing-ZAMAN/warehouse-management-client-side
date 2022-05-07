@@ -4,7 +4,7 @@ import ItemCard from './ItemCard';
 const StoreItems = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('storeItems.json')
+        fetch('http://localhost:5000/items')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

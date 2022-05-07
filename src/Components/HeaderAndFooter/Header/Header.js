@@ -3,14 +3,14 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <div className='fixed-top'>
+        <div className='sticky-top'>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Food Factory</Navbar.Brand>
+                    <Navbar.Brand href="/">Food Factory</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/home">Home</Nav.Link>
                             <Nav.Link href="#storeItems">Storage</Nav.Link>
                             <NavDropdown title="More" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -21,7 +21,7 @@ const Header = () => {
                             </NavDropdown>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">Blogs</Nav.Link>
+                            <Nav.Link href="/about">Blogs</Nav.Link>
                             <Nav.Link eventKey={2} href="#memes">Log In</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
