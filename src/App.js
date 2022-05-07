@@ -11,6 +11,8 @@ import Item from './Components/StoreItems/Item';
 import ManageInventories from './Components/ManageInventories/ManageInventories';
 import Blog from './Components/MainPage/Blog/Blog';
 import AddItem from './Components/ManageInventories/AddItem';
+import Login from './Components/UserLoginAndSignUp/Login';
+import SignUp from './Components/UserLoginAndSignUp/SignUp';
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         <Route path="/additem" element={<AddItem />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+
 
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
