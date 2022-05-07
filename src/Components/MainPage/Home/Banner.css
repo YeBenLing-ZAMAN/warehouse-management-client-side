@@ -1,0 +1,18 @@
+.bannar-container{
+    height: calc(100vh - 56px);
+}
+
+.Carousel-item{
+    height: calc(100vh - 58px);
+}
+
+.overlay-image{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: .5;
+}
