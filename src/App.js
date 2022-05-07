@@ -8,6 +8,7 @@ import About from './Components/MainPage/About/About';
 import NotFound from './Components/HeaderAndFooter/NotFound/NotFound';
 import Service from './Components/Service/Service';
 import Item from './Components/StoreItems/Item';
+import ManageInventories from './Components/ManageInventories/ManageInventories';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path='inventory/:itemId' element={<Item></Item>}></Route>
+        <Route path="/Manageinventories" element={<ManageInventories />} />
+
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>
