@@ -16,7 +16,7 @@ const SignUp = () => {
     return (
         <div style={{ 'height': "100vh" }} className='d-flex flex-column align-items-center justify-content-center'>
             <div className='container w-100 w-md-50'>
-                <h1 className='text-center'>USER SignUP</h1>
+                <h1 className='text-center text-uppercase'>USER SignUP</h1>
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='mb-2' placeholder='Name' type="text" {...register("Name", { required: true })} />
                     <input className='mb-2' placeholder='Email' type="email" {...register("email", { required: true })} />

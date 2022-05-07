@@ -26,6 +26,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="Manageinventories">Manage Inventories</Nav.Link>
                             <Nav.Link as={Link} to="blog">Blogs</Nav.Link>
                             <Nav.Link as={Link} to="login" eventKey={2} >Log In</Nav.Link>
+                            <Nav.Link as={Link} to="signup" eventKey={2} >Sign Up</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

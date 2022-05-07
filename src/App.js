@@ -13,6 +13,7 @@ import Blog from './Components/MainPage/Blog/Blog';
 import AddItem from './Components/ManageInventories/AddItem';
 import Login from './Components/UserLoginAndSignUp/Login';
 import SignUp from './Components/UserLoginAndSignUp/SignUp';
+import ResetPassword from './Components/UserLoginAndSignUp/ResetPassword';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/resetPassword" element={<ResetPassword />} />
 
 
         <Route path="*" element={<NotFound></NotFound>} />
