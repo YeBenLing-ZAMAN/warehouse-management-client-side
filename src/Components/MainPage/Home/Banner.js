@@ -17,34 +17,32 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>TEMP STORE</h3>
+                    <p>it's our temp storage house.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className='Carousel-item'>
                 <img
                     className="d-block w-100 img-fluid overlay-image"
-                    src='https://i.ibb.co/M5Xp5ts/03.jpg'
+                    src='https://i.ibb.co/VBvfWtb/05.jpg'
                     alt="Second slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>OUR DELIVERY ADN LOADING</h3>
+                    <p>we are provided Door to Door delivery service.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className='Carousel-item'>
                 <img
                     className="d-block w-100 img-fliud overlay-image"
-                    src='https://i.ibb.co/sHMmfH6/02.jpg'
+                    src='https://i.ibb.co/LxGqLFL/04.jpg'
                     alt="Third slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
+                    <h3>OUR MAIN WAREHOUSE</h3>
+                    <p>we are provide this best service of this country.</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
@@ -52,3 +50,7 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
+// https://i.ibb.co/LxGqLFL/04.jpg
+// https://i.ibb.co/VBvfWtb/05.jpg
