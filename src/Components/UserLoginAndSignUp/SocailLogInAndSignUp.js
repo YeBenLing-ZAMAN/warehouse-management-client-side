@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import google from '../../Image/social/google.png';
 import Loading from '../CommonComponent/Loading';
+import useToken from './useToken';
 const SocailLogInAndSignUp = () => {
 
     const navigate = useNavigate();
@@ -13,6 +14,7 @@ const SocailLogInAndSignUp = () => {
 
     /* google signUp and logIn */
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [token] = useToken(user);
 
     if (loading) {
         return <Loading></Loading>

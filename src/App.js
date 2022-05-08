@@ -14,6 +14,7 @@ import SignUp from './Components/UserLoginAndSignUp/SignUp';
 import ResetPassword from './Components/UserLoginAndSignUp/ResetPassword';
 import { ToastContainer } from 'react-toastify';
 import RequireAuth from "./Components/UserLoginAndSignUp/RequirAuth";
+import Myitems from './Components/MyItems/Myitems';
 function App() {
   return (
     <div>
@@ -32,6 +33,10 @@ function App() {
         <Route path="/additem" element={
           <RequireAuth>
             <AddItem />
+          </RequireAuth>} />
+        <Route path="/myitems" element={
+          <RequireAuth>
+            <Myitems />
           </RequireAuth>} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />

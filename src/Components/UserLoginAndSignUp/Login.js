@@ -6,6 +6,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../CommonComponent/Loading';
 import './login.css';
+import useToken from './useToken';
 
 
 const Login = () => {
@@ -22,10 +23,13 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    /* jwt token using  */
+    const [token] = useToken(user);
+
     const onSubmit = handleSubmit(async (data) => {
-        console.log(data);
+        // console.log(data);
         await signInWithEmailAndPassword(data.email, data.password);
-        // navigate(from, { replace: true });
+        navigate(from, { replace: true });
     })
 
     let errorElement;
@@ -37,7 +41,7 @@ const Login = () => {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

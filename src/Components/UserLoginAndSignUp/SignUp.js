@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../CommonComponent/Loading';
+import useToken from './useToken';
 
 
 const SignUp = () => {
@@ -13,7 +14,8 @@ const SignUp = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-
+    
+    
     const [agree, setAgree] = useState(false);
     const [
         createUserWithEmailAndPassword,
@@ -21,15 +23,16 @@ const SignUp = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-
+    
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
+    /* jwt token using */
+    const [token] = useToken(user);
 
     if (loading) {
         return <Loading></Loading>
     }
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
@@ -40,16 +43,16 @@ const SignUp = () => {
 
 
     const onSubmit = async (data) => {
-        const name = data.name;
-        const email = data.email;
-        const password = data.password;
-        console.log(data);
-        // const agree = event.target.terms.checked;
+        const name = data?.name;
+        const email = data?.email;
+        const password = data?.password;
+        // console.log(data);
         await updateProfile({ displayName: name });
         console.log('Updated profile');
 
         await createUserWithEmailAndPassword(email, password);
-        // navigate('/home');
+        await updateProfile({ displayName: name });
+        navigate(from, { replace: true });
     }
 
     const navigateLogin = event => {
