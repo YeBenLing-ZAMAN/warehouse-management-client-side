@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 
 const useItemLoad = (id) => {
 const [item, setItem] = useState([]);
-console.log(id);
-
     useEffect(() => {
         const url = `http://localhost:5000/inventory/${id}`
         fetch(url)
