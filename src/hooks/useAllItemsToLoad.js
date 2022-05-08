@@ -5,7 +5,7 @@ const [items, setItems] = useState([]);
 
     useEffect(() => {
         const toLoad=async ()=>{
-            const url = `http://localhost:5000/items`
+            const url = `https://mysterious-scrubland-93327.herokuapp.com/items`
             await fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));

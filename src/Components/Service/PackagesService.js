@@ -1,9 +1,13 @@
 import React from 'react';
 import useWareHouseLoad from '../../hooks/useWareHouseLoad';
+import Loading from '../CommonComponent/Loading';
 import Service from './Service';
 
 const PackagesService = () => {
     const [warehouses] = useWareHouseLoad();
+    if (warehouses === undefined) {
+        return <Loading></Loading>
+    }
     return (
         <div style={{ 'minHeight': '100vh' }}>
             <div className=" position-relative my-4  ">

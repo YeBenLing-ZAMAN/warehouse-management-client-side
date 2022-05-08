@@ -3,12 +3,6 @@ import { Carousel } from 'react-bootstrap';
 import './Banner.css';
 
 const Banner = () => {
-    const [img, setImg] = useState([]);
-    useEffect(() => {
-        fetch('bannarImage.json')
-            .then(res => res.json())
-            .then(data => setImg(data));
-    }, [])
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex, e) => {
@@ -19,7 +13,7 @@ const Banner = () => {
             <Carousel.Item className='Carousel-item'>
                 <img
                     className="d-block w-100 img-fluid overlay-image"
-                    src={img[0]?.img}
+                    src='https://i.ibb.co/xGwPn1B/01.jpg'
                     alt="First slide"
                 />
                 <Carousel.Caption>
@@ -30,7 +24,7 @@ const Banner = () => {
             <Carousel.Item className='Carousel-item'>
                 <img
                     className="d-block w-100 img-fluid overlay-image"
-                    src={img[1]?.img}
+                    src='https://i.ibb.co/M5Xp5ts/03.jpg'
                     alt="Second slide"
                 />
 
@@ -42,7 +36,7 @@ const Banner = () => {
             <Carousel.Item className='Carousel-item'>
                 <img
                     className="d-block w-100 img-fliud overlay-image"
-                    src={img[2]?.img}
+                    src='https://i.ibb.co/sHMmfH6/02.jpg'
                     alt="Third slide"
                 />
 

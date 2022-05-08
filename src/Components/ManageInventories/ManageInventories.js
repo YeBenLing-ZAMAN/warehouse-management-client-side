@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useAllItemsToLoad from '../../hooks/useAllItemsToLoad';
+import Loading from '../CommonComponent/Loading';
 import ManageItemCard from './ManageItemCard';
 
 const ManageInventories = () => {
@@ -11,7 +12,7 @@ const ManageInventories = () => {
     const handleDelete = async (id) => {
         const proced = window.confirm('Are you sure? to delete');
         if (proced) {
-            await axios.delete(`http://localhost:5000/item/${id}`)
+            await axios.delete(`https://mysterious-scrubland-93327.herokuapp.com/item/${id}`)
                 .then(res => {
                     console.log(res);
                     console.log(res.data);
@@ -23,6 +24,9 @@ const ManageInventories = () => {
     }
     const navigateToAddPage = ()=>{
         navigate('/additem');
+    }
+    if (items === undefined) {
+        return <Loading></Loading>
     }
     return (
         <div className='my-4'>
