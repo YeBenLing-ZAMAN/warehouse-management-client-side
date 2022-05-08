@@ -1,13 +1,33 @@
 import React from 'react';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
+import Loading from '../CommonComponent/Loading';
 
 
 const ResetPassword = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => {
-        console.log(data);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const navigate = useNavigate();
+
+    if (sending) {
+        return <Loading></Loading>
     }
+
+    const onSubmit = async(data) => {
+        const email = data.email;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+            // navigate('/login');
+        }
+        else {
+            toast('please enter your email address');
+        }
+    }
+
     return (
         <div style={{ 'height': "100vh" }} className='d-flex flex-column align-items-center justify-content-center'>
             <div className='container w-100 w-md-50'>

@@ -14,6 +14,7 @@ import AddItem from './Components/ManageInventories/AddItem';
 import Login from './Components/UserLoginAndSignUp/Login';
 import SignUp from './Components/UserLoginAndSignUp/SignUp';
 import ResetPassword from './Components/UserLoginAndSignUp/ResetPassword';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

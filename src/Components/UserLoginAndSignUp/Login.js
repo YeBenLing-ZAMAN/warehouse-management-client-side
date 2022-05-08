@@ -4,6 +4,7 @@ import SocailLogInAndSignUp from './SocailLogInAndSignUp';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Loading from '../CommonComponent/Loading';
 
 
 const Login = () => {
@@ -20,18 +21,34 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const onSubmit = handleSubmit((data) => {
-        alert(JSON.stringify(data))
-        // console.log(data);
-      })
+    const onSubmit = handleSubmit(async (data) => {
+        console.log(data);
+        await signInWithEmailAndPassword(data.email, data.password);
+        navigate(from, { replace: true });
+    })
+
+    let errorElement;
+    if (loading) {
+        return <Loading></Loading>
+    }
+
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
+    
+    if (user) {
+        navigate(from, { replace: true });
+    }
 
     const navigateSignUP = event => {
         navigate('/signup');
     }
+
     return (
         <div style={{ 'height': "100vh" }} className='d-flex flex-column align-items-center justify-content-center'>
             <div className='container w-100 w-md-50'>
                 <h1 className='text-center text-uppercase'>user login</h1>
+                {errorElement}
                 <form className='d-flex flex-column' onSubmit={onSubmit}>
                     <input className='mb-2' placeholder='Email' type="email" {...register("email", { required: true })} />
                     <input className='mb-2' placeholder='Password' type="text" {...register("password", { required: true })} />
