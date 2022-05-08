@@ -1,9 +1,11 @@
 import axios from 'axios';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useAllItemsToLoad from '../../hooks/useAllItemsToLoad';
 import ManageItemCard from './ManageItemCard';
 
 const ManageInventories = () => {
+    const navigate = useNavigate();
     const [items, setItems] = useAllItemsToLoad();
     // console.log(items);
     const handleDelete = async (id) => {
@@ -19,9 +21,15 @@ const ManageInventories = () => {
                 });
         }
     }
+    const navigateToAddPage = ()=>{
+        navigate('/additem');
+    }
     return (
         <div className='my-4'>
-            <h2 className='text-center'>Manage Inventories</h2>
+            <div className='container d-flex align-items-center justify-content-between'>
+                <h2 className=''>Manage Inventories</h2>
+                <button onClick={navigateToAddPage} className='btn btn-danger'>Add Items</button>
+            </div>
             {
                 items.map(item =>
                     <ManageItemCard

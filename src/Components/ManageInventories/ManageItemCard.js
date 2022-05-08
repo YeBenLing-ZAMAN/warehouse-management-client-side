@@ -12,8 +12,8 @@ const ManageItemCard = ({ item , handleDelete}) => {
         navigate(`/inventory/${id}`);
     }
     return (
-        <div className='container'>
-            <Row className='mt-2 border border-1 rounded rounded-3 shadow-md d-flex align-items-center justify-content-around'>
+        <div className='container my-3'>
+            <Row className='mt-2 border border-1 rounded rounded-3 shadow-md d-flex align-items-center justify-content-around p-1'>
                 <Col xs={12} md={4} className='d-flex align-items-center p-0 '>
                     <img src={img} style={{ 'height': '50px' }} alt="" />
                     <div className='ms-2'>
@@ -22,7 +22,7 @@ const ManageItemCard = ({ item , handleDelete}) => {
                     </div>
                 </Col>
                 <Col xs={12} md={4}>
-                    <p className='text-left m-0'>Quantity:{quantity}</p>
+                    <p className='text-left m-0'><strong>Quantity:</strong><span className='text-danger'>{quantity}</span></p>
                 </Col>
                 <Col xs={12} md={4} className='d-flex p-0 p-md-2'>
                     <button onClick={() => handleItemsNavigate(_id)} className='btn btn-dark w-50 '>More Details</button>

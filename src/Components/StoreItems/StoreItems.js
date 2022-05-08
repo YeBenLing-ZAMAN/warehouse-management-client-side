@@ -20,7 +20,7 @@ const StoreItems = () => {
             <h1 className='text-center'>store items</h1>
             <div className='container mt-3 d-flex align-items-center justify-content-center flex-wrap'>
                 {
-                    items.map(item => <ItemCard key={item.id} item={item}></ItemCard>)
+                    items.slice(0,3).map(item => <ItemCard key={item.id} item={item}></ItemCard>)
                 }
             </div>
             <div className='d-flex align-items-center justify-content-center mt-5 mb-5'>
