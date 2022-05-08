@@ -48,9 +48,10 @@ const Item = () => {
     }
 
     const handleDelevered = async (event) => {
-        const updateQuantity = quantity - 1;
-        const url = `http://localhost:5000/item/${itemId}`;
-        await axios.put(url, { quantity: updateQuantity })
+        if(quantity>0){
+            const updateQuantity = quantity - 1;
+            const url = `http://localhost:5000/item/${itemId}`;
+            await axios.put(url, { quantity: updateQuantity })
             .then(res => {
                 console.log(res);
                 if (res?.data?.acknowledged === true) {
@@ -60,6 +61,9 @@ const Item = () => {
                     alert('Unsuccessfully!! please try again');
                 }
             });
+        }else{
+            alert("Stock out !! please restore");
+        }
     }
 
     return (
@@ -72,7 +76,7 @@ const Item = () => {
                     <h3>Name : {name}</h3>
                     <p className='d-none d-md-block'>{about}</p>
                     <h4>Supplier:{supplier}</h4>
-                    <h3 id="itemQuantity">Quantity:{quantity}</h3>
+                    <h3 id="itemQuantity">Quantity:{quantity} Kg</h3>
                     <div className='mt-md-4 d-flex flex-column flex-md-row align-items-md-center justify-content-start'>
                         <form onSubmit={incressItem} className="d-flex align-items-center">
                             <input name='newQuantity' className='me-3' style={{ 'width': '70px', "height": "33px" }} type="number" required />

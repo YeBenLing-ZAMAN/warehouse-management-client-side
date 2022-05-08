@@ -15,7 +15,7 @@ const ItemCard = ({ item }) => {
             <img src={img} style={{ 'height': '300px' }} alt="" />
             <h4 className=''>{name}</h4>
             <h5 className=''>supplier: {supplier}</h5>
-            <h5>Quantity: <span className='text-danger'>{quantity}</span></h5>
+            <h5>Quantity: <span className='text-danger'>{quantity}Kg</span></h5>
             <button onClick={() => handleItemsNavigate(_id)} className='btn btn-danger w-100'>More & Update</button>
         </div>
     );

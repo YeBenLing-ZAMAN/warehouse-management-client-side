@@ -22,7 +22,7 @@ const ManageItemCard = ({ item , handleDelete}) => {
                     </div>
                 </Col>
                 <Col xs={12} md={4}>
-                    <p className='text-left m-0'><strong>Quantity:</strong><span className='text-danger'>{quantity}</span></p>
+                    <p className='text-left m-0'><strong>Quantity:</strong><span className='text-danger'>{quantity}Kg</span></p>
                 </Col>
                 <Col xs={12} md={4} className='d-flex p-0 p-md-2'>
                     <button onClick={() => handleItemsNavigate(_id)} className='btn btn-dark w-50 '>More Details</button>

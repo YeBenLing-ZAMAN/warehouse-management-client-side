@@ -16,9 +16,10 @@ const ManageInventories = () => {
                 .then(res => {
                     console.log(res);
                     console.log(res.data);
-                    const remaining = items.filter(service => items._id !== id);
+                    const remaining = items.filter(item => item._id !== id);
                     setItems(remaining);
                     /* toast diye popup dekhate hobe  */
+                    alert("items detele succssfully!")
                 });
         }
     }
