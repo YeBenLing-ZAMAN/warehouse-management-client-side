@@ -2,7 +2,7 @@ import React from 'react';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../CommonComponent/Loading';
 
@@ -20,7 +20,7 @@ const ResetPassword = () => {
         const email = data.email;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Sent email');
+            toast('Email sent!');
             // navigate('/login');
         }
         else {
@@ -38,7 +38,9 @@ const ResetPassword = () => {
                 </form>
                 <Link to='/login' className='btn btn-link text-primary m-0 p-0 text-decoration-none'>Are you remember your password?</Link>
             </div>
+            <ToastContainer />
         </div>
+        
     );
 };
 

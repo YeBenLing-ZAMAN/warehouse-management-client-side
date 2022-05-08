@@ -24,7 +24,7 @@ const Login = () => {
     const onSubmit = handleSubmit(async (data) => {
         console.log(data);
         await signInWithEmailAndPassword(data.email, data.password);
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     })
 
     let errorElement;

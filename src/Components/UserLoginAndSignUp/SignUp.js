@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import SocailLogInAndSignUp from './SocailLogInAndSignUp';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../CommonComponent/Loading';
 
@@ -21,6 +21,9 @@ const SignUp = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
 
     if (loading) {
         return <Loading></Loading>
@@ -42,6 +45,8 @@ const SignUp = () => {
         const password = data.password;
         console.log(data);
         // const agree = event.target.terms.checked;
+        await updateProfile({ displayName: name });
+        console.log('Updated profile');
 
         await createUserWithEmailAndPassword(email, password);
         // navigate('/home');

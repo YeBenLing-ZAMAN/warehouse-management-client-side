@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/HeaderAndFooter/Header/Header';
 import Footer from './Components/HeaderAndFooter/Footer/Footer';
@@ -6,7 +5,6 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Components/MainPage/Home/Home';
 import About from './Components/MainPage/About/About';
 import NotFound from './Components/HeaderAndFooter/NotFound/NotFound';
-import Service from './Components/Service/Service';
 import Item from './Components/StoreItems/Item';
 import ManageInventories from './Components/ManageInventories/ManageInventories';
 import Blog from './Components/MainPage/Blog/Blog';
@@ -15,7 +13,7 @@ import Login from './Components/UserLoginAndSignUp/Login';
 import SignUp from './Components/UserLoginAndSignUp/SignUp';
 import ResetPassword from './Components/UserLoginAndSignUp/ResetPassword';
 import { ToastContainer } from 'react-toastify';
-
+import RequireAuth from "./Components/UserLoginAndSignUp/RequirAuth";
 function App() {
   return (
     <div>
@@ -23,9 +21,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path='inventory/:itemId' element={<Item></Item>}></Route>
-        <Route path="/Manageinventories" element={<ManageInventories />} />
-        <Route path="/additem" element={<AddItem />} />
+        <Route path='inventory/:itemId' element={
+          <RequireAuth>
+            <Item></Item>
+          </RequireAuth>}></Route>
+        <Route path="/Manageinventories" element={
+          <RequireAuth>
+            <ManageInventories />
+          </RequireAuth>} />
+        <Route path="/additem" element={
+          <RequireAuth>
+            <AddItem />
+          </RequireAuth>} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
@@ -36,7 +43,6 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>
-      <ToastContainer />
     </div>
   );
 }
