@@ -11,6 +11,10 @@ const StoreItems = () => {
     const navigateToManageInventories=()=>{
         navigate('/Manageinventories');
     }
+
+    const navigateToAddNewItems = ()=>{
+        navigate('/additem')
+    }
     
     return (
         <div id='storeItems' className='mt-5' style={{ 'minHeight': 'calc(100vh - 56px)' }}>
@@ -21,7 +25,7 @@ const StoreItems = () => {
                 }
             </div>
             <div className='d-flex align-items-center justify-content-center mt-5'>
-                <button className='btn btn-danger me-3'>add new Items</button>
+                <button onClick={navigateToAddNewItems} className='btn btn-danger me-3'>add new Items</button>
                 <button onClick={navigateToManageInventories} className='btn btn-danger ms-3'>More Items</button>
             </div>
         </div>

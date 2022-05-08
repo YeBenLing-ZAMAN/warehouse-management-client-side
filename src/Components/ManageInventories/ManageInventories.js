@@ -6,10 +6,10 @@ import ManageItemCard from './ManageItemCard';
 const ManageInventories = () => {
     const [items, setItems] = useAllItemsToLoad();
     // console.log(items);
-    const handleDelete = (id) => {
+    const handleDelete = async (id) => {
         const proced = window.confirm('Are you sure? to delete');
         if (proced) {
-            axios.delete(`http://localhost:5000/item/${id}`)
+            await axios.delete(`http://localhost:5000/item/${id}`)
                 .then(res => {
                     console.log(res);
                     console.log(res.data);
