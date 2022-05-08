@@ -12,7 +12,7 @@ const PackagesService = () => {
         <div style={{ 'minHeight': '100vh' }}>
             <div className=" position-relative my-4  ">
                 <div className=" d-flex justify-content-center align-items-center">
-                    <h1 className="text-center mt-5 mb-4 fw-bolder text-danger">OUR PACKAGE</h1>
+                    <h1 className="text-center mt-5 mb-4 fw-bolder text-danger">OUR PACKAGE AND WAREHOUSE</h1>
                     {/* <button class="btn btn-danger btn-sm ms-2" id="toastbtn">hot offer</button> */}
                 </div>
             </div>

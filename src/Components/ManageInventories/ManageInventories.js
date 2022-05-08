@@ -12,7 +12,7 @@ const ManageInventories = () => {
     const handleDelete = async (id) => {
         const proced = window.confirm('Are you sure? to delete');
         if (proced) {
-            await axios.delete(`https://mysterious-scrubland-93327.herokuapp.com/item/${id}`)
+            await axios.delete(`http://localhost:5000/item/${id}`)
                 .then(res => {
                     console.log(res);
                     console.log(res.data);

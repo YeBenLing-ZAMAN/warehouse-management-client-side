@@ -5,7 +5,7 @@ const useWareHouseLoad = (id) => {
     const [warehouses, setWarehouses] = useState([]);
     useEffect(() => {
         const toLoad=async ()=>{
-            const url = `https://mysterious-scrubland-93327.herokuapp.com/warehouse`
+            const url = `http://localhost:5000/warehouse`
             await fetch(url)
             .then(res => res.json())
             .then(data => setWarehouses(data));

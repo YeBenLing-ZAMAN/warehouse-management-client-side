@@ -7,7 +7,7 @@ const AddItem = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post('https://mysterious-scrubland-93327.herokuapp.com/additem', data)
+        axios.post('http://localhost:5000/additem', data)
             .then(function (response) {
                 console.log(response);
                 if(response?.data?.acknowledged===true){

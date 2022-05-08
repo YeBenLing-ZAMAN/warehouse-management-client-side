@@ -13,7 +13,7 @@ const Item = () => {
 
     const [item, setItem] = useState([]);
     useEffect(() => {
-        const url = `https://mysterious-scrubland-93327.herokuapp.com/inventory/${itemId}`
+        const url = `http://localhost:5000/inventory/${itemId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
@@ -28,7 +28,7 @@ const Item = () => {
         const newQuantity = event.target.newQuantity.value;
         if (newQuantity >= 1) {
             const updateQuantity = parseInt(newQuantity) + quantity;
-            const url = `https://mysterious-scrubland-93327.herokuapp.com/item/${itemId}`;
+            const url = `http://localhost:5000/item/${itemId}`;
             await axios.put(url, { quantity: updateQuantity })
                 .then(res => {
                     console.log(res);
@@ -49,7 +49,7 @@ const Item = () => {
 
     const handleDelevered = async (event) => {
         const updateQuantity = quantity - 1;
-        const url = `https://mysterious-scrubland-93327.herokuapp.com/item/${itemId}`;
+        const url = `http://localhost:5000/item/${itemId}`;
         await axios.put(url, { quantity: updateQuantity })
             .then(res => {
                 console.log(res);
