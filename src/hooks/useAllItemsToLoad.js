@@ -11,7 +11,7 @@ const [items, setItems] = useState([]);
             .then(data => setItems(data));
         }
         toLoad();
-    }, [items]);
+    }, []);
     return [items, setItems];
 }
 
