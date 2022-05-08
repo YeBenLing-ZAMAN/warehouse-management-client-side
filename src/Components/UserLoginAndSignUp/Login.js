@@ -51,7 +51,7 @@ const Login = () => {
                 {errorElement}
                 <form className='d-flex flex-column' onSubmit={onSubmit}>
                     <input className='mb-2' placeholder='Email' type="email" {...register("email", { required: true })} />
-                    <input className='mb-2' placeholder='Password' type="text" {...register("password", { required: true })} />
+                    <input className='mb-2' placeholder='Password' type="password" {...register("password", { required: true })} />
                     <input className="btn btn-dark" type="submit" />
                 </form>
                 <p>New On Food Factory? <Link to="/signup" className='text-danger m-0 p-0 text-decoration-none' onClick={navigateSignUP}>Please signUp</Link> </p>

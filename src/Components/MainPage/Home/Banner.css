@@ -16,3 +16,12 @@
     background-size: cover;
     opacity: .8;
 }
+
+@media only screen and (max-width: 600px) {
+    .bannar-container{
+        max-height: 200px;
+    }
+    .Carousel-item{
+        max-height: 200px;
+    }
+}

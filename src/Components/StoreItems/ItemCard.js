@@ -11,7 +11,7 @@ const ItemCard = ({ item }) => {
         navigate(`/inventory/${id}`);
     }
     return (
-        <div className='mx-2 border border-1 rounded rounded-3 shadow-md'>
+        <div className='mx-2 my-2 border border-1 rounded rounded-3 shadow-md'>
             <img src={img} style={{ 'height': '200px' }} alt="" />
             <p className='text-center'>{name}</p>
             <button onClick={() => handleItemsNavigate(_id)} className='btn btn-danger w-100'>More</button>
