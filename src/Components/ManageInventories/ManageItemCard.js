@@ -2,10 +2,10 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-const ManageItemCard = ({ item }) => {
+const ManageItemCard = ({ item , handleDelete}) => {
     const { img, _id, name, quantity, supplier } = item;
     const navigate = useNavigate();
-    console.log(_id);
+    // console.log(_id);
 
     /* handle dynamic routes of items */
     const handleItemsNavigate = id => {
@@ -26,7 +26,7 @@ const ManageItemCard = ({ item }) => {
                 </Col>
                 <Col xs={12} md={4} className='d-flex p-0 p-md-2'>
                     <button onClick={() => handleItemsNavigate(_id)} className='btn btn-dark w-50 '>More Details</button>
-                    <button className='btn btn-danger w-50 ms-2'>Delete Item</button>
+                    <button onClick={()=>handleDelete(_id)} className='btn btn-danger w-50 ms-2'>Delete Item</button>
                 </Col>
             </Row>
         </div>
