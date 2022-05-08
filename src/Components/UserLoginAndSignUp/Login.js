@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../CommonComponent/Loading';
+import './login.css';
 
 
 const Login = () => {
@@ -35,7 +36,7 @@ const Login = () => {
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
-    
+
     if (user) {
         navigate(from, { replace: true });
     }
@@ -46,7 +47,7 @@ const Login = () => {
 
     return (
         <div style={{ 'height': "100vh" }} className='d-flex flex-column align-items-center justify-content-center'>
-            <div className='container w-100 w-md-50'>
+            <div className='container login-container'>
                 <h1 className='text-center text-uppercase'>user login</h1>
                 {errorElement}
                 <form className='d-flex flex-column' onSubmit={onSubmit}>
